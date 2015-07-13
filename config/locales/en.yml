@@ -20,4 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  base_title: "E-Learning System"
+  welcome: "Welcome to E-Learning System"
+  contact: "Contact"
+  about: "About"
+  new: "New"
+  help: "Help"
+  home: "Home"
+  logo: "E-Learning System"
+  login: "Log in"
+  signup: "Sign up now!"
+  framgia: "Framgia"
