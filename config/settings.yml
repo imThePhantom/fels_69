@@ -1,0 +1,5 @@
+avatar_size: 2
+emailmax: 140
+namemax: 50
+length:
+  page: 20
