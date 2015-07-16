@@ -3,3 +3,5 @@ emailmax: 140
 namemax: 50
 length:
   page: 20
+remember:
+  true: 1
