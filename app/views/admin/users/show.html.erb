@@ -1,0 +1,17 @@
+<p>
+  <strong><%= t "admin.name" %>:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong><%= t "admin.email" %>:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= t "admin.admin_title" %>:</strong>
+  <%= @user.admin %>
+</p>
+
+<%= link_to t("admin.edit"), edit_admin_user_path(@user) %> |
+<%= link_to t("admin.back"), admin_users_path %>
