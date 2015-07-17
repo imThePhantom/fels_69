@@ -2,9 +2,9 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 User.create!(name:  "admin",
-             email: "a@g.c`",
-             password:              "1",
-             password_confirmation: "1",
+             email: "admin@test.com",
+             password:              "123456",
+             password_confirmation: "123456",
              admin: true)
 10.times do |n|
   name  = Faker::Name.name
