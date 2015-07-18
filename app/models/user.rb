@@ -43,9 +43,9 @@ class User < ActiveRecord::Base
   end  
 
   private
-    def avatar_size
-      if avatar.size > Settings.avatar_size.megabytes
-        errors.add :avatar, t("picture_error")
-      end
+  def avatar_size
+    if avatar.size > Settings.avatar_size.megabytes
+      errors.add :avatar, t("picture_error")
     end
+  end
 end
