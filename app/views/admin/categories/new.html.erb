@@ -1,0 +1,13 @@
+<% provide :title, t("admin.new_category") %>
+<h1><%= t "admin.new_category" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<div>
+  	  <%= render "form" %>
+  	</div>
+  	<br>
+  	<div>
+      <%= link_to t("admin.back"), admin_categories_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

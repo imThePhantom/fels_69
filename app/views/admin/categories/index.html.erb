@@ -1,0 +1,20 @@
+<% provide :title, t("admin.category_list") %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <h1 class="text-left"><%= t "admin.category_list" %></h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="col-md-3"><%= t "admin.name" %></th>
+          <th class="col-md-6"><%= t "admin.description" %></th>
+          <th class="col-md-3", colspan="3"><%= t "admin.action" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @categories %>
+      </tbody>
+    </table>
+    <%= will_paginate %>
+    <%= link_to t("new_category"), new_admin_category_path, class: "btn btn-primary" %>
+  </div>
+</div>
