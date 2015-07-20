@@ -1,0 +1,12 @@
+<% provide :title, @category.name %>
+
+<% if @category.picture? %>
+  <%= image_tag @category.picture.url %>
+<% else %>
+  <%= image_tag "default-picture.png" %>
+<% end %>
+<h1><%= @category.name %></h1>
+<p><%= @category.description %></p>
+
+<%= link_to t("admin.back"), admin_categories_path, class: "btn btn-primary" %>
+<%= link_to t("admin.edit"), edit_admin_category_path(@category), class: "btn btn-primary" %>
