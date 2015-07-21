@@ -29,6 +29,8 @@ en:
   edit_user: "Update your profile"
   error: "error"
   framgia: "Framgia"
+  jQuery_error1: "jQuery Waypoints needs a callback function or handler option."
+  jQuery_error2: "The #{method} method does not exist in jQuery Waypoints."
   help: "Help"
   home: "Home"
   invalid: "Invalid email/password combination"

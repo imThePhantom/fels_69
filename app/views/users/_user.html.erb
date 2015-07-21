@@ -1,0 +1,8 @@
+  <div class="user">
+    <% if user.avatar? %>
+      <%= image_tag user.avatar.url %>
+    <% else %>
+      <%= image_tag "default-avatar.png"%>
+    <% end %>
+    <%= link_to user.name, user %>
+  </div>

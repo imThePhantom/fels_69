@@ -1,0 +1,5 @@
+$('#users').append('<%= j render @users %>');
+$('.pagination').replaceWith('<%= j will_paginate @users %>');
+<% unless @users.next_page %>
+$('#infinite-scrolling .pagination').remove();
+<% end %>
