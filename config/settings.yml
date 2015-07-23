@@ -3,6 +3,7 @@ picture_size: 2
 emailmax: 140
 namemax: 50
 descriptionmax: 255
+answer_count: 4
 length:
   page: 20
 remember:

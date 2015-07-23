@@ -1,7 +1,7 @@
 <tr>
   <td><%= category.name %></td>
   <td><%= category.description %></td>
-  <td><%= link_to t("admin.show"), admin_category_path(category) %></td>
+  <td><%= link_to t("admin.show"), admin_category_words_path(category) %></td>
   <td><%= link_to t("admin.edit"), edit_admin_category_path(category) %></td>
   <td><%= link_to t("admin.delete"), admin_category_path(category), 
     method: :delete, data: {confirm: t("admin.destroy_question")} %></td>

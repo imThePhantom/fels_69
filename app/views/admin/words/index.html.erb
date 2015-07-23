@@ -1,0 +1,33 @@
+<% provide :title, @category.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <% if @category.picture? %>
+      <%= image_tag @category.picture.url %>
+    <% else %>
+      <%= image_tag "default-picture.png" %>
+    <% end %>
+  </aside>
+  <aside class="col-md-4">
+    <h1 class="text-left"><%= @category.name %></h1>
+    <p><%= @category.description %></p>
+  </aside>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th><%= t "admin.words" %></th>
+          <th colspan="4" style="text-align:center">
+            <%= t "admin.answer" %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @words %>
+      </tbody>
+    </table>
+    <%= will_paginate %>
+    <%= link_to t("admin.new_word"), new_admin_category_word_path, class: "btn btn-primary" %>
+  </div>
+</div>

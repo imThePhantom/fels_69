@@ -1,0 +1,20 @@
+<tr>
+  <td><%= word.content %></td>
+  <% word.answers.each do |answer| %>
+    <td>
+      <% if answer.correct %>
+        <i class="glyphicon glyphicon-ok"></i>
+      <% elsif %>
+        <i class="glyphicon glyphicon-remove"></i>
+      <% end %>
+      <%= answer.content %>
+    </td>
+  <% end %>
+  <td class="col-md-2">
+    <%= link_to t("admin.edit"), edit_admin_category_word_path(@category, word),
+      class: "btn btn-primary" %>
+    <%= link_to t("admin.delete"),  admin_category_word_path(@category, word), 
+      method: :delete, data: {confirm: t("admin.destroy_question")},
+      class: "btn btn-primary" %>
+  </td>
+</tr>
