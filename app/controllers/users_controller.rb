@@ -6,7 +6,11 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page]).per Settings.length.page
+    @users = User.paginate(page: params[:page], per_page: Settings.length.page).order "name"
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
