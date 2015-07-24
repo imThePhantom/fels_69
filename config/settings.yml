@@ -5,6 +5,9 @@ namemax: 50
 descriptionmax: 255
 answer_count: 4
 length:
-  page: 20
+  page: 10
 remember:
   true: 1
+all: "get_all"
+learned: "learned"
+not_learned: "not_learned"

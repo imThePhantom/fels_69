@@ -2,6 +2,12 @@
   <div class="container">
     <%= link_to t("logo"), root_path, id: "logo" %>
     <nav>
+      <ul class="nav nav-pills navbar-nav">
+        <li><%= link_to t("admin.word_list"), words_path %></li>
+        <li><%= link_to t("admin.category"), "#" %></li>
+      </ul>
+    </nav>
+    <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("home"), root_path %></li>
         <li><%= link_to t("help"), help_path %></li>
@@ -28,8 +34,6 @@
             <ul class="dropdown-menu">
               <li><%= link_to t("admin.user"), admin_users_path %></li>
               <li><%= link_to t("admin.category"), admin_categories_path %></li>
-              <li><%= link_to t("admin.lesson"), "#" %></li>
-              <li><%= link_to t("admin.word"), "#" %></li>
             </ul>
           </li>
           <% end %>

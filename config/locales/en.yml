@@ -21,8 +21,10 @@
 
 en:
   about: "About"
+  all: "All"
   account: "Account"
   base_title: "E-Learning System"
+  categories: "Categories"
   confirm: "Confirmation"
   contact: "Contact"
   create_acc: "Creat my account"
@@ -47,6 +49,7 @@ en:
   profile: "Profile"
   remember: "Remember me on this computer"
   save_changes: "Save changes"
+  search: "Search"
   settings: "Settings"
   signup: "Sign up now!"
   signup_title: "Sign up"
@@ -72,6 +75,7 @@ en:
     word: "Word"
     user_list: "User List"
     category_list: "Category List"
+    word_list: "Word list"
     create_user_success: "User was successfully created"
     update_user_success: "User was successfully updated"
     delete_user_success: "User was successfully deleted"
