@@ -1,0 +1,28 @@
+<%= label_tag t "categories"%>
+<%= form_for words_path, method: :get do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= select_tag "category_id", options_from_collection_for_select(@categories,
+        :id, :name, params[:category_id]), include_blank: t("all"),
+        class: "form-control" %>	
+    </div>
+    <div class="col-md-5">
+      <%= text_field_tag :search, params[:search], class:"form-control" %>	
+    </div>
+    <div class="col-md-3">
+      <%= submit_tag t("search"), class: "btn btn-primary" %>	
+    </div>
+  </div>
+  <div class="row">
+    <div class="tm-radio col-md-5">
+      <% [Settings.learned, Settings.not_learned, Settings.all].each do |item| %>
+        <%= label_tag item, class: "radio-inline spacing-bottom" do %>
+          <%= radio_button_tag :filter_state, item,
+            checked = (params[:filter_state] == item || params[:filter_state].blank?),
+            class: "form-control" %> 
+          <%= item.titleize %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>  
+<% end %> 
