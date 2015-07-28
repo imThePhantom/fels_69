@@ -8,6 +8,9 @@ class Category < ActiveRecord::Base
   validates :description, length: {maximum: Settings.descriptionmax}
   mount_uploader :picture, PictureUploader
 
+  scope :ordered_by_create_at, ->{order "created_at DESC"}
+  scope :search_category, ->search_category{where "name LIKE ?", "%#{search_category}%"}
+
   private
   def picture_size
    errors.add :picture, t("picture_error") if picture.size > Settings.picture_size.megabytes

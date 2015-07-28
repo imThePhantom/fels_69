@@ -158,3 +158,22 @@ input {
 .spacing-bottom{
   margin-bottom: 30px;
 }
+
+.categories{
+  list-style: none;
+  margin: 0;
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.category{
+  .name{
+  font-size: 2em;
+  margin-top: 30px;
+  }
+  .buton{
+  margin-top: 30px;
+  }
+}
