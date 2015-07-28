@@ -57,6 +57,9 @@ en:
   update_profile: "Profile updated"
   users: "Users"
   answer: "Answer"
+  word: "Word"
+  mean: "Mean"
+  start_lession: "Start Lession"
 
   admin:
     show: "Show"

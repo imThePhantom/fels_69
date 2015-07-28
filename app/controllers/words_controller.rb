@@ -9,6 +9,10 @@ class WordsController < ApplicationController
     else
       Word.paginate(page: params[:page], per_page: Settings.length.page).alphabet
     end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
 end

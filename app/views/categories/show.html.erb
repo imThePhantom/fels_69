@@ -1,0 +1,42 @@
+<% provide :title, @category.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <% if @category.picture? %>
+      <%= image_tag @category.picture.url %>
+    <% else %>
+      <%= image_tag "default-picture.png" %>
+    <% end %>
+  </aside>
+  <aside class="col-md-4">
+    <h1 class="text-left"><%= @category.name %></h1>
+    <p><%= @category.description %></p>
+  </aside>
+  <aside class="col-md-3">
+    <%= link_to t("start_lession"), "#", class: "btn-lg btn-block btn-primary" %>
+  </aside>  
+</div>
+<div class="row">
+  <aside class="col-md-7">
+    <table class="table center">
+      <thead>
+        <tr class="success">
+          <th class="center"><%= t "word" %></th>
+          <th class="center"><%= t "mean" %></th>
+        </tr>
+      </thead>
+      <% @words.each do |word| %>
+      <tbody>
+        <tr>
+          <td><%= word.content %></td>
+          <td>
+            <% word.answers.each do |answer| %>
+              <%= answer.content if answer.correct %>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+    <%= will_paginate @words %>
+  </aside>
+</div>

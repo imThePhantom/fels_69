@@ -11,3 +11,4 @@ remember:
 all: "get_all"
 learned: "learned"
 not_learned: "not_learned"
+picture_index_size: "100"

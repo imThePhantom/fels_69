@@ -1,0 +1,14 @@
+<div class="col-md-8 col-md-offset-2 center">
+  <table class="table table-strip">
+    <thead>
+      <tr class="success">
+        <th class="center"><%= t "word" %></th>
+        <th class="center"><%= t "mean" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @words %>    
+    </tbody>
+  </table>
+</div>
+<%= will_paginate %>

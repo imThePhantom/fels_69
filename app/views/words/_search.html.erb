@@ -1,5 +1,5 @@
 <%= label_tag t "categories"%>
-<%= form_for words_path, method: :get do |f| %>
+<%= form_for words_path, method: :get, remote: true do |f| %>
   <div class="row">
     <div class="col-md-4">
       <%= select_tag "category_id", options_from_collection_for_select(@categories,

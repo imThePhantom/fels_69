@@ -1,0 +1,15 @@
+<li class="category">
+  <div class="row">
+    <span class="col-md-2">
+      <% if category.picture? %>
+        <%= image_tag category.picture.url, size: Settings.picture_index_size %>
+      <% else %>
+        <%= image_tag "default-picture.png", size: Settings.picture_index_size %>
+      <% end %>
+    </span>
+    <span class="col-md-3 name"><%= link_to category.name, category %> </span>
+    <span class="col-md-1 buton"><%= link_to t("start_lession"), "#",
+      class: "btn btn-primary" %>
+    </span>
+  </div>
+</li>
