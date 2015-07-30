@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
   resources :words, only: [:index]
 
-  resources :categories
+  resources :categories do
+    resources :lessons
+  end
 
   namespace :admin do
     resources :users
