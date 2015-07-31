@@ -12,7 +12,9 @@
     <p><%= @category.description %></p>
   </aside>
   <aside class="col-md-3">
-    <%= link_to t("start_lession"), "#", class: "btn-lg btn-block btn-primary" %>
+    <%= link_to t("start_lession"),
+      category_lessons_path(category_id: @category),
+        method: :post, class: "btn-lg btn-block btn-primary" %>
   </aside>  
 </div>
 <div class="row">

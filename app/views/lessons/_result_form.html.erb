@@ -1,0 +1,28 @@
+  <hr>
+  <div class="col-md-5">
+    <%= t "word_index" %><%= f.index + 1 %>
+    <br>
+    <h1><%= f.object.word.content %></h1>
+  </div>
+  <div class="col-md-5">
+    <%= f.hidden_field :word_id, value: f.object.word.id %>
+    <% f.object.word.answers.each do |answer| %>
+      <div class="row">
+        <div class="col-md-2">
+          <%= f.radio_button :answer_id, answer.id, disabled: @time_over %>
+        </div>
+        <div class="col-md-3">
+          <%= answer.content %>
+        </div>
+        <div class="col-md-3">
+          <% if @time_over %>
+            <% if answer.try(:correct?) %>
+              <i class="glyphicon glyphicon-ok"></i>
+            <% else %>
+              <i class="glyphicon glyphicon-remove"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>

@@ -12,3 +12,6 @@ all: "get_all"
 learned: "learned"
 not_learned: "not_learned"
 picture_index_size: "100"
+max_word_per_lesson: 20
+min_word_per_lesson: 1
+time_per_word: 10

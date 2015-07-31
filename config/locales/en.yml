@@ -63,6 +63,14 @@ en:
   mean: "Mean"
   start_lession: "Start Lession"
   view_profile: "View my profile"
+  not_enough_word: "Not enough not-learned-word to create lesson!"
+  create_lesson_fail: "Could not create lesson"
+  create_lesson_success: "Lession was successfully created"
+  update_lesson_success: "Lession was successfully updated"
+  update_lesson_fail: "Could not update lesson"
+  point: "Point: "
+  word_index: "Word "
+  submit: "Submit" 
 
   admin:
     show: "Show"

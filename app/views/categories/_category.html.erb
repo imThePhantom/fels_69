@@ -8,8 +8,9 @@
       <% end %>
     </span>
     <span class="col-md-3 name"><%= link_to category.name, category %> </span>
-    <span class="col-md-1 buton"><%= link_to t("start_lession"), "#",
-      class: "btn btn-primary" %>
+    <span class="col-md-1 buton"><%= link_to t("start_lession"),
+      category_lessons_path(category_id: category.id), method: :post,
+        class: "btn btn-primary" %>
     </span>
   </div>
 </li>
