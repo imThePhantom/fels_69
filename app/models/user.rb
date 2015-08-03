@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 1 }, allow_nil: true
   mount_uploader :avatar, PictureUploader
   validate :avatar_size
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
   has_many :active_relationships, class_name: "Relationship",
     foreign_key: "follower_id",
