@@ -19,6 +19,8 @@
 
   <div class="col-md-8">
     <%= render "follow_form" if logged_in? %>
+    <h1><%= t "activities" %></h1>
+    <%= render @lessons %>
   </div>
 
 </div>

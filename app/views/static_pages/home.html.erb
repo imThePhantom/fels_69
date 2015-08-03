@@ -11,15 +11,18 @@
     <div class="col-md-8 content">
       <div class="row">
         <div class="col-md-6">
-          <%= button_to t "button.words" , class: "btn btn-primary" %>
+          <%= button_to t("button.words"), words_path,
+            method: :get, class: "btn-success btn-lg btn btn-primary" %>
         </div>
         <div class="col-md-6">
-          <%= button_to t "button.lessons" , class: "btn btn-primary" %>
+          <%= button_to t("button.lessons"), categories_path,
+            method: :get, class: "btn-danger btn-lg btn btn-primary" %>
         </div>
       </div>
     </div>
     <div class="col-md-8 content">
       <h3><%= t "activities" %></h3>
+      <%= render @lessons %>
     </div>
   </div>
 <% else %>

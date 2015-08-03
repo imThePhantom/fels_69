@@ -11,12 +11,11 @@ class Lesson < ActiveRecord::Base
   default_scope -> { order(created_at: :desc) }
 
   def correct_count
-    results.select{|result| result.answer.try(:correct?)}.count
+    self.point = results.select{|result| result.answer.try(:correct?)}.count
   end
 
   def time_remain
-    self.point = self.results
-      .count*Settings.time_per_word - (Time.zone.now - self.created_at).to_i
+    self.results.count*Settings.time_per_word - (Time.zone.now - self.created_at).to_i
   end
 
   private
