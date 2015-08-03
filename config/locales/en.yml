@@ -70,7 +70,12 @@ en:
   update_lesson_fail: "Could not update lesson"
   point: "Point: "
   word_index: "Word "
-  submit: "Submit" 
+  submit: "Submit"
+  learned: "learned"
+  words_in_a: "words in a"
+  lesson: "lesson"
+  at: "at"
+  from: "from"
 
   admin:
     show: "Show"

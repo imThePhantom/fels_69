@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :init_user, only: [:show, :edit, :update, :correct_user, :following, :followers]
   before_action :correct_user, only: [:edit, :update]
   def show
+    @lessons = @user.lessons.paginate page: params[:page], per_page: Settings.length.page
   end
 
   def index

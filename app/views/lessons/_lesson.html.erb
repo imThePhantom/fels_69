@@ -1,0 +1,19 @@
+<% if lesson.user.avatar? %>
+  <%= image_tag lesson.user.avatar.url, size: Settings.avatar_index_size %>
+<% else %>
+  <%= image_tag "default-avatar.png", size: Settings.avatar_index_size %>
+<% end %>
+<%= link_to lesson.user.name, user_path(lesson.user) %>
+<%= t "learned" %>
+<%= lesson.point %>
+<%= t "words_in_a" %>
+<% if current_user? lesson.user %>
+  <%= link_to t("lesson"), edit_category_lesson_path(lesson.category,lesson) %>
+<% else %>
+<%= t "lesson" %>
+<% end %>
+<%= t "from" %>	
+<%= link_to lesson.category.name, category_path(lesson.category) %>
+<%= t "at" %>	
+<%= lesson.created_at %>
+<hr>
