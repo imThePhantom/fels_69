@@ -30,6 +30,7 @@ gem "fog",                     "1.30.0"
 # Endless pages by scolling
 gem "kaminari"
 gem "rails_config"
+gem "friendly_id"
 # Use Unicorn as the app server
 # gem "unicorn"
 # Use Capistrano for deployment
