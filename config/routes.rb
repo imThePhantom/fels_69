@@ -29,7 +29,9 @@ Rails.application.routes.draw do
     resources :categories do
       resources :words
     end
+    resources :words
   end
+
   resources :relationships,  only: [:create, :destroy, :index]
   get "/users/:id/:type" => "relationships#index"
 end

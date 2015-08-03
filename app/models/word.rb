@@ -23,5 +23,4 @@ class Word < ActiveRecord::Base
   def check_correct_answer
     errors.add :base, I18n.t("not_choice_correct") if answers.select{|opt| opt.correct}.blank?
   end
-
 end

@@ -16,5 +16,10 @@
     </table>
     <%= will_paginate %>
     <%= link_to t("new_category"), new_admin_category_path, class: "btn btn-primary" %>
+    <h2><%= t "admin.import" %></h2>
+    <%= form_tag admin_words_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag t("button.submit"), class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>

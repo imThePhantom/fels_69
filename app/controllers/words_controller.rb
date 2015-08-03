@@ -14,5 +14,4 @@ class WordsController < ApplicationController
       format.js
     end
   end
-
 end

@@ -111,7 +111,12 @@ en:
     new_word: "New word"
     add_answer: "Add answer"
     remove: "Remove"
-
+    import: "Import CSV data file"
+    import_success: "Successfull import data from CSV file"
+    import_danger: "Cannot import data"
+    no_changes: 
+          - Nothing change. Please check your file again!
+          - Maybe this file was not csv file or this file was successfull imported.
   button:
     create_acc: "Creat my account"
     follow: "Follow"
